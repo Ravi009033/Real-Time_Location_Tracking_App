@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    tools:context="com.myapplication.MapsActivity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        tools:context=".MapsActivity"
+        tools:layout="@android:layout/simple_spinner_dropdown_item" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:ems="10"
+        android:hint="Locality"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/map_icon"
+        android:inputType="textAutoComplete"
+        android:imeOptions="actionSearch"
+        android:autofillHints=""
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="570dp"
+        android:ems="10"
+        android:hint="@string/latitude"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/latitude"
+        android:inputType="numberDecimal"
+        android:autofillHints=""
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="10dp"/>
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="620dp"
+        android:ems="10"
+        android:hint="@string/longitude"
+        android:drawableStart="@drawable/longitude"
+        android:background="@drawable/custom_input"
+        android:inputType="numberDecimal"
+        android:autofillHints=""
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/button1"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/custom_button"
+        android:onClick="updateLocationOnclick"
+        android:text="My Location"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/custom_button"
+        android:onClick="shareButtonOnclick"
+        android:text="Share"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="680dp"
+        android:onClick="secondLocationOnclick"
+        android:background="@drawable/custom_button"
+        android:textSize="15sp"
+        android:textColor="@color/blue"
+        android:textAllCaps="false"
+        android:text="Find"
+        android:textStyle="bold"/>
+
+
+</FrameLayout>
